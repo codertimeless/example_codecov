@@ -4,10 +4,9 @@ sudo: false
 
 install:
   - pip install codecov
-  - pip install flake8
 
 script:
-  - coverage run tests.py && coverage xml -o coverage_A.xml && codecov -t "0a5a6692-f82f-4aa0-a3aa-1cde10c13de3" -f coverage_A.xml
+  - coverage run test.py && coverage xml -o coverage_A.xml && codecov -t "0a5a6692-f82f-4aa0-a3aa-1cde10c13de3" -f coverage_A.xml
   - coverage run test2.py && coverage xml -o coverage_B.xml && codecov -t "0a5a6692-f82f-4aa0-a3aa-1cde10c13de3" -f coverage_B.xml -F projectb
 
 
